@@ -19,6 +19,6 @@ users = Table(
     Column('email', String, nullable=False),
     Column('user_name', String, nullable=False),
     Column('password', String, nullable=False),
-    Column('registered_id', TIMESTAMP, default=datetime.utcnow),
+    Column('registered_id', TIMESTAMP, default=datetime.UTC),
     Column('role_id', Integer, ForeignKey('roles.id')),
 )
